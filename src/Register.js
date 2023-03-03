@@ -52,7 +52,7 @@ const Register = () => {
         e.preventDefault();
         if(validName && validPass && matchPassword){
             try {
-                fetch(`http://localhost:3000${REGISTER_URL}`, {
+                fetch(`http://localhost:5000${REGISTER_URL}`, {
                     method: 'POST',
                     headers: {'content-Type': 'application/json'},
                     body:JSON.stringify({
@@ -154,9 +154,8 @@ const Register = () => {
                 </div>
                 <button disabled={!email || !validName || !validPass || !checkMatch ? true : false}>Submit</button>
 
-                <p>Already registered</p><br/>
+                <p>Already registered <Link to="/Signin">Sign In</Link> </p>
                 <span>
-                <Link to="/Signin">Sign In</Link> 
                 </span>
                                                                              
         </form>

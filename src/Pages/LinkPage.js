@@ -4,13 +4,13 @@ import React from 'react'
 
 const LinkPage = () => {
   return (
-    <div className="App">
-      <h1>Links</h1>
-      <Link to='/register'>Register</Link><br/>
-      <Link to='/signin'>Signin</Link><br/>
-      <Link to='/se-only'>Software Engineers only</Link><br/>
-      <Link to='/marketers-only'>Marketers Only</Link><br/>
-      <Link to='/hr-only'>Human Resource personnels only</Link>
+    <div className='App'>
+      <header>Links</header>
+      <p>You are logged in</p><br/>
+      <Link to="/se-only" className='Link'>Go to the software engineering page</Link><br/>
+      <Link to="/marketers-only" className='Link'>Go  to the Marketers page</Link><br/>
+      <Link to="/hr-only"className='Link'>Go to the human resource personnel page</Link>
+      <Link to="/protected"className='Link'>Go to protected route</Link>
     </div>
   )
 }
